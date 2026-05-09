@@ -1,0 +1,4 @@
+google-ads>=25.1.0
+google-analytics-data>=0.18.0
+google-auth>=2.29.0
+

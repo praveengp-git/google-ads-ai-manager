@@ -1,0 +1,17 @@
+keyword,match_type,bid
+project management tool,phrase,4.50
+project management tool,exact,5.00
+project management software,phrase,4.75
+project management software,exact,5.25
+team collaboration software,phrase,4.25
+team collaboration software,exact,4.75
+task management software,phrase,3.75
+task management software,exact,4.25
+workflow management tool,phrase,4.00
+workflow management tool,exact,4.50
+project planning software,phrase,3.50
+project planning software,exact,4.00
+remote team project management,phrase,4.25
+saas project management,phrase,4.50
+business project management software,phrase,5.00
+

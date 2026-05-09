@@ -1,0 +1,21 @@
+.DS_Store
+.env
+.venv/
+__pycache__/
+*.pyc
+
+# Google and OAuth credentials
+credentials.json
+client_secret*.json
+adc.json
+*.credentials.json
+*.service-account.json
+
+# Local MCP config with real credentials
+.mcp.json
+
+# Generated report exports
+reports/*.csv
+reports/*.json
+reports/*.xlsx
+

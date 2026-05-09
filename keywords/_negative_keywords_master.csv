@@ -1,0 +1,12 @@
+keyword,match_type,reason
+free,broad,free-only intent
+reviews,broad,research-only intent
+alternative,broad,comparison intent not prioritized in this example
+salary,broad,job seeker intent
+jobs,broad,job seeker intent
+career,broad,job seeker intent
+template,broad,free template intent
+spreadsheet,broad,spreadsheet template intent
+open source,phrase,non-commercial software intent
+course,broad,learning intent
+

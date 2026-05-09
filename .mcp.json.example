@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "google-ads-ai-manager": {
+      "command": "google-ads-mcp",
+      "env": {
+        "GOOGLE_ADS_DEVELOPER_TOKEN": "YOUR_DEVELOPER_TOKEN",
+        "GOOGLE_ADS_LOGIN_CUSTOMER_ID": "YOUR_MCC_ID",
+        "GOOGLE_APPLICATION_CREDENTIALS": "/absolute/path/to/adc.json"
+      }
+    }
+  }
+}
+
