@@ -1,6 +1,6 @@
 {
   "mcpServers": {
-    "google-ads-ai-manager": {
+    "google-ads": {
       "command": "google-ads-mcp",
       "env": {
         "GOOGLE_ADS_DEVELOPER_TOKEN": "YOUR_DEVELOPER_TOKEN",
@@ -10,4 +10,3 @@
     }
   }
 }
-

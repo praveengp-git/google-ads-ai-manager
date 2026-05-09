@@ -152,24 +152,22 @@ The template scripts default to dry-run mode. You must pass `--apply` before any
 
 ### 1. Create a Google Cloud project
 
-Create a project in Google Cloud Console and enable:
+Create a project in [Google Cloud Console](https://console.cloud.google.com/) and enable:
 
-- Google Ads API
-- Google Analytics Data API
+- [Google Ads API](https://console.cloud.google.com/flows/enableapi?apiid=googleads.googleapis.com)
+- [Google Analytics Data API](https://console.cloud.google.com/flows/enableapi?apiid=analyticsdata.googleapis.com)
 
 ### 2. Create OAuth credentials
 
-Create an OAuth Client ID for a desktop app.
+Create an OAuth Client ID for a desktop app in the [Google Cloud Credentials page](https://console.cloud.google.com/apis/credentials).
 
-Use that client to generate a refresh token for the Google account that has access to your Google Ads manager account and GA4 property.
+Use that client to generate a refresh token for the Google account that has access to your Google Ads manager account and GA4 property. See the [OAuth setup guide](https://developers.google.com/google-ads/api/docs/get-started/oauth-cloud-project) for details.
 
 ### 3. Get a Google Ads developer token
 
-In Google Ads, open your manager account:
+You need a [Google Ads Manager (MCC) account](https://ads.google.com/home/tools/manager-accounts/) to get a developer token.
 
-`Tools and Settings -> Setup -> API Center`
-
-Copy your developer token and request the access level you need.
+Once you have one, go to [API Center](https://ads.google.com/aw/apicenter) to find your token and apply for the access level you need. See [developer token docs](https://developers.google.com/google-ads/api/docs/get-started/dev-token) for details.
 
 Developer token approval can take a few days. The API itself is free. Your normal ad spend still applies.
 
@@ -190,6 +188,8 @@ Never commit `.env`, OAuth client secrets, refresh tokens, service account files
 ### 6. Configure MCP reads
 
 Copy `.mcp.json.example` to `.mcp.json` and adjust the command/env fields for your MCP server.
+
+The official Google Ads MCP server is at [googleads/google-ads-mcp](https://github.com/googleads/google-ads-mcp). Follow its README for installation.
 
 Use MCP to inspect the account. Use scripts for writes.
 
@@ -214,4 +214,11 @@ python scripts/add_negatives_template.py --apply
 This repo uses a fictional Acme Corp SaaS account. Replace the campaign specs, keywords, URLs, and conversion event names with your own data before running anything against a live account.
 
 Start with low budgets and paused campaigns. Review everything in the Google Ads UI before enabling.
+
+## References
+
+- [Google Ads API docs](https://developers.google.com/google-ads/api/docs/start)
+- [Google Analytics Data API docs](https://developers.google.com/analytics/devguides/reporting/data/v1)
+- [Google Ads MCP server](https://github.com/googleads/google-ads-mcp)
+- [google-ads Python library](https://github.com/googleads/google-ads-python)
 
