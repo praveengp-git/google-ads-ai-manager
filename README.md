@@ -173,6 +173,8 @@ Developer token approval can take a few days. The API itself is free. Your norma
 
 ### 4. Install dependencies
 
+Requires Python 3.10 or newer.
+
 ```bash
 python -m venv .venv
 source .venv/bin/activate
@@ -190,6 +192,8 @@ Never commit `.env`, OAuth client secrets, refresh tokens, service account files
 Copy `.mcp.json.example` to `.mcp.json` and adjust the command/env fields for your MCP server.
 
 The official Google Ads MCP server is at [googleads/google-ads-mcp](https://github.com/googleads/google-ads-mcp). Follow its README for installation.
+
+The example uses Application Default Credentials (ADC). The MCP server also supports OAuth credentials from your `.env` file. Check the MCP server docs for auth options.
 
 Use MCP to inspect the account. Use scripts for writes.
 
@@ -212,6 +216,8 @@ python scripts/add_negatives_template.py --apply
 ## Notes
 
 This repo uses a fictional Acme Corp SaaS account. Replace the campaign specs, keywords, URLs, and conversion event names with your own data before running anything against a live account.
+
+The templates share helper functions. `add_negatives_template.py` and `update_template.py` import from `create_campaign_template.py`. When creating a dated script, keep it in the `scripts/` directory or copy the shared imports too.
 
 Start with low budgets and paused campaigns. Review everything in the Google Ads UI before enabling.
 
